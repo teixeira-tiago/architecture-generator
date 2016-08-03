@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/ArchitecturesGenerator/xml/schemas/pattern.xsd" uri="xml-resources/jaxb/padrao/pattern.xsd"/>
+    <system systemId="file:/home/thiagus/Development/Pesquisa/ArchitecturesGenerator/src/xml/schemas/heuristics.xsd" uri="xml-resources/jaxb/parametersclass/heuristics.xsd"/>
+</catalog>

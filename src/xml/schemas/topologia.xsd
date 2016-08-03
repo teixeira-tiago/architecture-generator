@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:element name="bit" type="xsd:int"/>
+	
+	<xsd:element name="lenghtString" type="xsd:int"/>
+	
+	<xsd:element name="hop" type="xsd:int"/>	
+	
+	<xsd:element name="element">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="link" maxOccurs="unbounded" /> 
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:int" use="required" />
+            <xsd:attribute name="value" type="xsd:float" fixed="0.0" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="line">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="hop"/>
+				<xsd:element ref="lenghtString" minOccurs="0"/>
+				<xsd:element ref="bit" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="family" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Base" />
+						<xsd:enumeration value="MultiStage" /> 
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="type" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="HOP" />
+						<xsd:enumeration value="InversePerfectShuffler" />
+						<xsd:enumeration value="PerfectShuffler" /> 
+						<xsd:enumeration value="BitReverse" />
+						<xsd:enumeration value="Butterfly" /> 
+						<xsd:enumeration value="BaseLine" /> 
+						<xsd:enumeration value="Cube" /> 
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute> 
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="colun">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="hop"/>
+				<xsd:element ref="lenghtString" minOccurs="0"/>
+				<xsd:element ref="bit" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="family" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Base" />
+						<xsd:enumeration value="MultiStage" /> 
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="type" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="HOP" />
+						<xsd:enumeration value="InversePerfectShuffler" />
+						<xsd:enumeration value="PerfectShuffler" /> 
+						<xsd:enumeration value="BitReverse" />
+						<xsd:enumeration value="Butterfly" /> 
+						<xsd:enumeration value="BaseLine" /> 
+						<xsd:enumeration value="Cube" /> 
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute> 
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="link">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="line"/>
+				<xsd:element ref="colun"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:int" use="required" />			
+		</xsd:complexType>
+	</xsd:element>
+		
+	<xsd:element name="Topologies">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="element" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>		
+	
+</xsd:schema>

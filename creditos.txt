@@ -1,0 +1,25 @@
+Interface Genetic Algorithm
+Vladimir Oliveira Di Iorio  
+Marcus Vincius Alvim Andrade
+Marco Antonio Carim Filho
+Luana Cristina Lima da Fonseca
+Angelo Souza Cavalier 
+
+Dijsktra Algorithm
+Ricardo dos Santos Ferreira
+Marcos Vinicius da Silva
+Allison Garcia
+
+PathFinder Algorithm
+Ricardo dos Santos Ferreira
+Brian Luppi
+
+Encoded Dataflows
+Ricardo dos Santos Ferreira
+Marcos Vinícius da Silva
+<a href="http://express.ece.ucsb.edu/benchmark/">ExpressGroup</a>
+Harold Frank Hall
+<a href="http://ziyang.eecs.umich.edu/%7Edickrp/tgff/">TGFF - Task Graph For Free</a>
+	Robert P. Dick
+	David L. Rhodes
+	Wayne Wolf

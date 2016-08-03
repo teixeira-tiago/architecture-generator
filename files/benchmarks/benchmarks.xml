@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Benchmarks>
+    <bench id="0">
+        <name>Fir16</name>
+        <path>architectures.dataflows.javagraphs.Fir16</path>
+        <wires>63</wires>
+        <nodes>49</nodes>
+    </bench>
+    <bench id="1">
+        <name>Cplx8</name>
+        <path>architectures.dataflows.javagraphs.Cplx8</path>
+        <wires>60</wires>
+        <nodes>46</nodes>
+    </bench>
+    <bench id="2">
+        <name>FilterRGB</name>
+        <path>architectures.dataflows.javagraphs.filterRGB</path>
+        <wires>70</wires>
+        <nodes>57</nodes>
+    </bench>
+    <bench id="3">
+        <name>FDCTa</name>
+        <path>architectures.dataflows.javagraphs.dctcompleto</path>
+        <wires>186</wires>
+        <nodes>139</nodes>
+    </bench>
+    <bench id="4">
+        <name>FDCT</name>
+        <path>architectures.dataflows.javagraphs.DCT</path>
+        <wires>124</wires>
+        <nodes>92</nodes>
+    </bench>
+    <bench id="5">
+        <name>FilterRGB+Paeth</name>
+        <path>architectures.dataflows.javagraphs.filterRGBpaeth</path>
+        <wires>104</wires>
+        <nodes>82</nodes>
+    </bench>
+    <bench id="6">
+        <name>SNN</name>
+        <path>architectures.dataflows.javagraphs.snn</path>
+        <wires>295</wires>
+        <nodes>249</nodes>
+    </bench>
+    <bench id="7">
+        <name>TreeFir64</name>
+        <path>architectures.dataflows.javagraphs.treefir64</path>
+        <wires>255</wires>
+        <nodes>193</nodes>
+    </bench>
+    <bench id="8">
+        <name>Fir64</name>
+        <path>architectures.dataflows.javagraphs.fir64</path>
+        <wires>255</wires>
+        <nodes>193</nodes>
+    </bench>
+    <bench id="9">
+        <name>FilterRGB+Paeth+FDCT</name>
+        <path>architectures.dataflows.javagraphs.filterRGBpaethFDCT</path>
+        <wires>290</wires>
+        <nodes>221</nodes>
+    </bench>
+</Benchmarks>

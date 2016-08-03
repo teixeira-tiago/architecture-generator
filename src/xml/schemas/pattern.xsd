@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">   
+    
+    <xsd:element name="COMPONENT">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="PORT" maxOccurs="unbounded" /> 
+            </xsd:sequence>
+            <xsd:attribute name="unit" type="xsd:string" use="required" />
+            <xsd:attribute name="operation" type="xsd:string" use="required" />
+            <xsd:attribute name="name" type="xsd:string" use="required" /> 
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="SIGNAL">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="SOURCE" maxOccurs="1" />
+                <xsd:element ref="SINK" maxOccurs="1" /> 
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" /> 
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="PORT">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+            <xsd:attribute name="value" type="xsd:int" use="required" /> 
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="SOURCE">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+            <xsd:attribute name="port" type="xsd:string" use="required" /> 
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="SINK">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+            <xsd:attribute name="port" type="xsd:string" use="required" /> 
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="DESIGN">
+        <xsd:complexType>
+            <xsd:sequence>               
+                <xsd:element ref="COMPONENT" maxOccurs="unbounded" />
+                <xsd:element ref="SIGNAL" maxOccurs="unbounded" />
+            </xsd:sequence>
+            <xsd:attribute name="trace" use="required">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="true" />
+                        <xsd:enumeration value="false" /> 
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+        </xsd:complexType>
+    </xsd:element>    
+    	
+</xsd:schema>

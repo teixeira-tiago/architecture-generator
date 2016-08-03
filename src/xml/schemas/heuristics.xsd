@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="repository">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                <xsd:element ref="basicParameters"/>
+                <xsd:element ref="heuristics"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="genetic">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="timeGeneration"/>
+                <xsd:element ref="numberGeneration"/>
+                <xsd:element ref="formatCross"/>
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" fixed="Genetic Algorithm" use="optional"/>
+            <xsd:attribute name="acronym" type="xsd:string" fixed="GA" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="relinking">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="allElements"/>
+                <xsd:element ref="firstElements"/>
+                <xsd:element ref="randomicElements"/>
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" fixed="Path Relinking" use="optional"/>
+            <xsd:attribute name="acronym" type="xsd:string" fixed="PR" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="annealing">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="maxIterations"/>
+                <xsd:element ref="initialTemp"/>
+                <xsd:element ref="finalTemp"/>
+                <xsd:element ref="formulas"/>
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" fixed="Simulated Annealing" use="optional"/>
+            <xsd:attribute name="acronym" type="xsd:string" fixed="SA" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="heuristics">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="genetic"/>
+                <xsd:element ref="relinking"/>
+                <xsd:element ref="annealing"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="timeGeneration">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:float" default="86400000" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="numberGeneration">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="100" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formatCross">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="1" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="elements">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="firstElements">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="elements"/>
+            </xsd:sequence>
+            <xsd:attribute name="value" type="xsd:boolean" default="false" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="randomicElements">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="elements"/>
+            </xsd:sequence>
+            <xsd:attribute name="value" type="xsd:boolean" default="true" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="allElements">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:boolean" default="false" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="taxa">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:double" default="0.9" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formula1">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:boolean" default="false" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formula2">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:boolean" default="false" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formula3">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:boolean" default="false" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formula4">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="taxa"/>
+            </xsd:sequence>
+            <xsd:attribute name="value" type="xsd:boolean" default="true" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formulas">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="formula1"/>
+                <xsd:element ref="formula2"/>
+                <xsd:element ref="formula3"/>
+                <xsd:element ref="formula4"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="maxIterations">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="10" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="initialTemp">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:double" default="1000.0" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="finalTemp">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:double" default="0.001" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="basicParameters">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="placement"/>
+                <xsd:element ref="route"/>
+                <xsd:element ref="fix"/>
+                <xsd:element ref="cost"/>
+                <xsd:element ref="fileBench"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="toroide">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="1" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="orientation">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:string" default="->" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="placementVariation">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="3" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="placementTime">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:double" default="1.0" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="filePopulation">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="placementPopulation">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="11" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="placement">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="toroide"/>
+                <xsd:element ref="orientation"/>
+                <xsd:element ref="placementVariation"/>
+                <xsd:element ref="placementTime"/>
+                <xsd:element ref="filePopulation"/>
+                <xsd:element ref="placementPopulation"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="algorithmRouting">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="0" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="formatCalc">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="1" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="upLimit">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="25" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="downLimit">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="25" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="fileForStatistic">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:string" default="files/statistics.txt" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="route">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="algorithmRouting"/>
+                <xsd:element ref="formatCalc"/>
+                <xsd:element ref="upLimit"/>
+                <xsd:element ref="downLimit"/>
+                <xsd:element ref="fileForStatistic"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="typeCross">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:int" default="0" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="fileFix">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="fix">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="typeCross"/>
+                <xsd:element ref="fileFix"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="valueCost">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:double" default="0.0" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="typeCost">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="valueCost"/>
+            </xsd:sequence>
+            <xsd:attribute name="value" type="xsd:int" default="0" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="cost">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="typeCost"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="fileBench">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:string" default="files/benchmarks.xml" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

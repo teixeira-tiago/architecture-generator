@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Benchmarks>
+    <bench id="0">
+        <name>Conf0</name>
+        <path>architectures.dataflows.mips.Conf0</path>
+        <wires>72</wires>
+        <nodes>51</nodes>
+    </bench>
+    <bench id="1">
+        <name>Conf1</name>
+        <path>architectures.dataflows.mips.Conf1</path>
+        <wires>94</wires>
+        <nodes>49</nodes>
+    </bench>
+    <bench id="2">
+        <name>Conf2</name>
+        <path>architectures.dataflows.mips.Conf2</path>
+        <wires>95</wires>
+        <nodes>49</nodes>
+    </bench>
+    <bench id="3">
+        <name>Conf3</name>
+        <path>architectures.dataflows.mips.Conf3</path>
+        <wires>121</wires>
+        <nodes>57</nodes>
+    </bench>
+    <bench id="4">
+        <name>Conf4</name>
+        <path>architectures.dataflows.mips.Conf4</path>
+        <wires>63</wires>
+        <nodes>42</nodes>
+    </bench>
+    <bench id="5">
+        <name>Conf5</name>
+        <path>architectures.dataflows.mips.Conf5</path>
+        <wires>65</wires>
+        <nodes>38</nodes>
+    </bench>
+    <bench id="6">
+        <name>Conf6</name>
+        <path>architectures.dataflows.mips.Conf6</path>
+        <wires>95</wires>
+        <nodes>49</nodes>
+    </bench>
+    <bench id="7">
+        <name>Conf7</name>
+        <path>architectures.dataflows.mips.Conf7</path>
+        <wires>98</wires>
+        <nodes>52</nodes>
+    </bench>
+    <bench id="8">
+        <name>Conf8</name>
+        <path>architectures.dataflows.mips.Conf8</path>
+        <wires>98</wires>
+        <nodes>52</nodes>
+    </bench>
+    <bench id="9">
+        <name>Conf9</name>
+        <path>architectures.dataflows.mips.Conf9</path>
+        <wires>61</wires>
+        <nodes>34</nodes>
+    </bench>
+    <bench id="10">
+        <name>Conf10</name>
+        <path>architectures.dataflows.mips.Conf10</path>
+        <wires>34</wires>
+        <nodes>21</nodes>
+    </bench>
+    <bench id="11">
+        <name>Conf11</name>
+        <path>architectures.dataflows.mips.Conf11</path>
+        <wires>25</wires>
+        <nodes>20</nodes>
+    </bench>
+    <bench id="12">
+        <name>Conf12</name>
+        <path>architectures.dataflows.mips.Conf12</path>
+        <wires>6</wires>
+        <nodes>6</nodes>
+    </bench>
+</Benchmarks>

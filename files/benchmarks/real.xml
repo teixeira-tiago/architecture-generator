@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Benchmarks>
+    <bench id="0">
+        <name>collapse_pyr</name>
+        <path>architectures.dataflows.real.collapse_pyr</path>
+        <wires>73</wires>
+        <nodes>56</nodes>
+    </bench>
+    <bench id="1">
+        <name>cosine2</name>
+        <path>architectures.dataflows.real.cosine2</path>
+        <wires>91</wires>
+        <nodes>82</nodes>
+    </bench>
+    <bench id="2">
+        <name>feedback_points</name>
+        <path>architectures.dataflows.real.feedback_points</path>
+        <wires>50</wires>
+        <nodes>53</nodes>
+    </bench>
+    <bench id="3">
+        <name>Fir16</name>
+        <path>architectures.dataflows.javagraphs.Fir16</path>
+        <wires>63</wires>
+        <nodes>49</nodes>
+    </bench>
+    <bench id="4">
+        <name>h2v2_smooth_downsample</name>
+        <path>architectures.dataflows.real.h2v2_smooth_downsample</path>
+        <wires>52</wires>
+        <nodes>51</nodes>
+    </bench>
+    <bench id="5">
+        <name>invert_matrix_general</name>
+        <path>architectures.dataflows.real.invert_matrix_general</path>
+        <wires>354</wires>
+        <nodes>333</nodes>
+    </bench>
+    <bench id="6">
+        <name>jpeg_fdct_islow</name>
+        <path>architectures.dataflows.real.jpeg_fdct_islow</path>
+        <wires>169</wires>
+        <nodes>134</nodes>
+    </bench>
+    <bench id="7">
+        <name>jpeg_idct_ifast</name>
+        <path>architectures.dataflows.real.jpeg_idct_ifast</path>
+        <wires>162</wires>
+        <nodes>122</nodes>
+    </bench>
+    <bench id="8">
+        <name>smooth_color_z_triangle</name>
+        <path>architectures.dataflows.real.smooth_color_z_triangle</path>
+        <wires>196</wires>
+        <nodes>197</nodes>
+    </bench>
+    <bench id="9">
+        <name>write_bmp_header</name>
+        <path>architectures.dataflows.real.write_bmp_header</path>
+        <wires>88</wires>
+        <nodes>106</nodes>
+    </bench>
+</Benchmarks>

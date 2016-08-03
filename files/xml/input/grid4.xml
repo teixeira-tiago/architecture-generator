@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Topologies>
+    <element id="0">
+        <link id="0">
+            <line type="HOP" family="Base">
+                <hop>0</hop>
+            </line>
+            <colun type="HOP" family="Base">
+                <hop>1</hop>
+            </colun>
+        </link>
+        <link id="1">
+            <line type="HOP" family="Base">
+                <hop>1</hop>
+            </line>
+            <colun type="HOP" family="Base">
+                <hop>0</hop>
+            </colun>
+        </link>
+        <link id="2">
+            <line type="HOP" family="Base">
+                <hop>0</hop>
+            </line>
+            <colun type="HOP" family="Base">
+                <hop>-1</hop>
+            </colun>
+        </link>
+        <link id="3">
+            <line type="HOP" family="Base">
+                <hop>-1</hop>
+            </line>
+            <colun type="HOP" family="Base">
+                <hop>0</hop>
+            </colun>
+        </link>
+    </element>
+</Topologies>

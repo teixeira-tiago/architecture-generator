@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:element name="nodes" type="xsd:int"/>
+	
+	<xsd:element name="wires" type="xsd:int"/>
+	
+	<xsd:element name="name" type="xsd:string"/>
+	
+	<xsd:element name="path" type="xsd:string"/>	
+	
+	<xsd:element name="bench">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="name"/>
+				<xsd:element ref="path"/>
+				<xsd:element ref="wires"/>
+				<xsd:element ref="nodes"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:int" use="required" />			
+		</xsd:complexType>
+	</xsd:element>
+		
+	<xsd:element name="Benchmarks">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="bench" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>		
+	
+</xsd:schema>

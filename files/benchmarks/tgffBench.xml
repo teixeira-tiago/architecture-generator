@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Benchmarks>
+    <bench id="0">
+        <name>graph50_2x2</name>
+        <path>files.dataflow.graph50_2x2</path>
+        <wires>89</wires>
+        <nodes>64</nodes>
+    </bench>
+    <bench id="1">
+        <name>graph100_2x2</name>
+        <path>files.dataflow.graph100_2x2</path>
+        <wires>169</wires>
+        <nodes>124</nodes>
+    </bench>
+    <bench id="2">
+        <name>graph200_2x2</name>
+        <path>files.dataflow.graph200_2x2</path>
+        <wires>351</wires>
+        <nodes>253</nodes>
+    </bench>
+    <bench id="3">
+        <name>graph500_2x2</name>
+        <path>files.dataflow.graph500_2x2</path>
+        <wires>877</wires>
+        <nodes>637</nodes>
+    </bench>
+    <bench id="4">
+        <name>graph1000_2x2</name>
+        <path>files.dataflow.graph1000_2x2</path>
+        <wires>1784</wires>
+        <nodes>1277</nodes>
+    </bench>
+</Benchmarks>

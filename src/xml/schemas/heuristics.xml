@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository>
+    <heuristics>
+        <genetic name="Genetic Algorithm" acronym="GA">
+            <timeGeneration value="86400000"/>
+            <numberGeneration value="100"/>
+            <formatCross value="1"/>
+        </genetic>
+        <relinking name="Path Relinking" acronym="PR">
+            <allElements value="false"/>
+            <firstElements value="false">
+                <elements value="10"/>
+            </firstElements>
+            <randomicElements value="true">
+                <elements value="11"/>
+            </randomicElements>
+        </relinking>
+        <annealing name="Simulated Annealing" acronym="SA">
+            <maxIterations value="10"/>
+            <initialTemp value="1000"/>
+            <finalTemp value="0.001"/>
+            <formulas>
+                <formula1 value="false"/>
+                <formula2 value="false"/>
+                <formula3 value="false"/>
+                <formula4 value="true">
+                    <taxa value="0.9"/>
+                </formula4>
+            </formulas>
+        </annealing>
+    </heuristics>
+    <basicParameters>
+        <placement>
+            <toroide value="1"/>
+            <orientation value="->"/>
+            <placementVariation value="3"/>
+            <placementTime value="1.0"/>
+            <filePopulation value=""/>
+            <placementPopulation value="11"/>
+        </placement>
+        <route>
+            <algorithmRouting value="0"/>
+            <formatCalc value="1"/>
+            <upLimit value="25"/>
+            <downLimit value="25"/>
+            <fileForStatistic value="statistic.txt"/>
+        </route>
+        <fix>
+            <typeCross value="0"/>
+            <fileFix value=""/>
+        </fix>
+        <cost>
+            <typeCost value="0">
+                <valueCost value="0"/>
+            </typeCost>
+        </cost>
+        <fileBench value="file/benchmark.xml"/>
+    </basicParameters>
+</repository>
